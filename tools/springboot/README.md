@@ -80,3 +80,8 @@ You might have to add additional runtime external dependencies to your *BUILD* f
 ## Internals
 
 To understand how this rule works, start by reading the [springboot.bzl file](springboot.bzl).
+
+./springboot_pkg.sh Application gs-rest-service.jar myhello.jar gs-rest-service-0.1.0 MANIFEST.MF
+
+
+

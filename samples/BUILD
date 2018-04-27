@@ -47,5 +47,6 @@ add_boot_web_starter(app_deps)
 # Build the app
 springboot(
     name = "samples",
-    boot_app_class = "hello.Application"
+    boot_app_class = "hello.Application",
+    deps = app_deps
 )

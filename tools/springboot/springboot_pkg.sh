@@ -75,3 +75,6 @@ cd $RULEDIR/outputjar
 jar -cfm0 ../$OUTPUTJAR ../$MANIFEST .
 
 cd $RULEDIR
+
+
+

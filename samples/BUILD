@@ -13,12 +13,20 @@
 ## exports_files(["springboot.bzl", "springboot_pkg.sh"])
 
 # Load our Spring Boot Rule
+# load("//tools/springboot:springboot2.bzl",
+#        "generated_maven_jars",
+#        "generated_java_libraries"
+# )
+
+# Load our Spring Boot Rule
 load("//tools/springboot:springboot.bzl",
         "springboot",
-        "add_boot_web_starter"
+        "add_boot_tomcat_starter",
+        "add_boot_web_starter",
+        "add_boot_actuator_starter"
 )
 
-## "add_boot_jetty_starter",
+## add_boot_jetty_starter
 
 #
 # Internal Application Dependencies (Bazel targets)
@@ -35,14 +43,27 @@ load("//tools/springboot:springboot.bzl",
 # WORKSPACE.sample file provided in this Git repository for guidance.
 # Note that transitive dependencies of each external dependency MUST be also explicitly listed
 # both here in app_deps and in the WORKSPACE file.
-
+##  "../../samples/lib/myhello.jar"
 app_deps = [
-  "lib/myhello.jar"
+ "@org_apache_logging_log4j_log4j_api//jar",
+ "@commons_logging_commons_logging//jar",
+ "@com_fasterxml_classmate//jar",
+ "@org_hibernate_hibernate_validator//jar",
+ "@com_fasterxml_jackson_datatype_jdk8//jar",
+ "@com_fasterxml_jackson_datatype_jsr310//jar",
+ "@com_fasterxml_jackson_module_param//jar",
+ "@javax_annotation_api//jar",
+ "@org_jboss_logging//jar",
+ "@org_yaml_snakeyaml//jar"
 ]
 
 # Convenience Methods for Adding Entire Starters
-# add_boot_jetty_starter(app_deps)
+## add_boot_jetty_starter(app_deps)
+
+add_boot_actuator_starter(app_deps)
+add_boot_tomcat_starter(app_deps)
 add_boot_web_starter(app_deps)
+
 
 # Build the app
 springboot(

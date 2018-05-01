@@ -7,8 +7,19 @@ The rule is contained in a directory that is designed to be copied into your WOR
 It has detailed documentation:
 - [bazel-springboot-rule](tools/springboot): a Bazel extension to build Spring Boot applications
 
-bazel build //samples:samples
+pwd
+/something/bazelspringboot-rul
 
-ladmins-MacBook-Pro-4:bazel-springboot-rule rajasekar.rajendran$
- java -jar bazel-out/darwin-fastbuild/genfiles/samples/samples_springboot.jar
+## To Build the bazel file 
 
+>bazel build //samples:samples
+
+
+## To run the generated standalone springboot in port 8090
+
+>java -jar bazel-out/darwin-fastbuild/genfiles/samples/samples_springboot.jar
+
+## Check this out in the browser
+
+> http://localhost:8090/greeting?name=Bazel
+>>  {"id":2,"content":"Hello, Baze"}

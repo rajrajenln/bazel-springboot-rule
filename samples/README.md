@@ -1,5 +1,8 @@
-## Bazel Spring Boot Rule Samples
+## Bazel Spring Boot Rule Greeting Service
 
-This directory will contain sample uses of the Spring Boot rule.
-To expedite release to open source, those samples have been removed in the initial release.
-Spring Boot has a large set of upstream dependencies that have to be vetted for licensing.
+
+## Opensource Greeting Service
+
+Please use Spring Boot Greeting Service as a reference :
+https://spring.io/guides/gs/rest-service/ and the repo is available in 
+https://github.com/spring-guides/gs-rest-service/tree/master/complete

@@ -22,4 +22,4 @@ pwd
 ## Check this out in the browser
 
 > http://localhost:8090/greeting?name=Bazel
->>  {"id":2,"content":"Hello, Baze"}
+>>  {"id":2,"content":"Hello, Bazel"}
